@@ -7,23 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF2E1FF326B6C8B700D989A6 /* CurrencyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2E1FF226B6C8B700D989A6 /* CurrencyTableViewCell.swift */; };
+		DF44AE2026BFDBAF00428707 /* image23.png in Resources */ = {isa = PBXBuildFile; fileRef = DF44AE1F26BFDBAF00428707 /* image23.png */; };
 		DF86713626A1D5D700EED6EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF86713526A1D5D700EED6EC /* AppDelegate.swift */; };
 		DF86713826A1D5D700EED6EC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF86713726A1D5D700EED6EC /* SceneDelegate.swift */; };
-		DF86713A26A1D5D700EED6EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF86713926A1D5D700EED6EC /* ViewController.swift */; };
 		DF86713D26A1D5D700EED6EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF86713B26A1D5D700EED6EC /* Main.storyboard */; };
 		DF86713F26A1D5D700EED6EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF86713E26A1D5D700EED6EC /* Assets.xcassets */; };
 		DF86714226A1D5D700EED6EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF86714026A1D5D700EED6EC /* LaunchScreen.storyboard */; };
+		DF86714C26A1DB4E00EED6EC /* CurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF86714B26A1DB4E00EED6EC /* CurrencyViewController.swift */; };
+		DF86714E26A1DBF400EED6EC /* ChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF86714D26A1DBF400EED6EC /* ChangeViewController.swift */; };
+		DF96871D26C2724B0052E79A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF96871C26C2724B0052E79A /* ProfileViewController.swift */; };
+		DFC8D09426C12BC400FA5032 /* Img123.PNG in Resources */ = {isa = PBXBuildFile; fileRef = DFC8D09126C12BC400FA5032 /* Img123.PNG */; };
+		DFD395DC26AB2C180006F4B2 /* Implements.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD395DB26AB2C180006F4B2 /* Implements.swift */; };
+		DFE472EF26B480900059A2F9 /* PrivatBankAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE472EE26B480900059A2F9 /* PrivatBankAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DF2E1FF226B6C8B700D989A6 /* CurrencyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTableViewCell.swift; sourceTree = "<group>"; };
+		DF44AE1F26BFDBAF00428707 /* image23.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image23.png; sourceTree = "<group>"; };
 		DF86713226A1D5D700EED6EC /* Currency change.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Currency change.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF86713526A1D5D700EED6EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF86713726A1D5D700EED6EC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DF86713926A1D5D700EED6EC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DF86713C26A1D5D700EED6EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DF86713E26A1D5D700EED6EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF86714126A1D5D700EED6EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF86714326A1D5D700EED6EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF86714B26A1DB4E00EED6EC /* CurrencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyViewController.swift; sourceTree = "<group>"; };
+		DF86714D26A1DBF400EED6EC /* ChangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeViewController.swift; sourceTree = "<group>"; };
+		DF96871C26C2724B0052E79A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		DFC8D09126C12BC400FA5032 /* Img123.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Img123.PNG; sourceTree = "<group>"; };
+		DFD395DB26AB2C180006F4B2 /* Implements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Implements.swift; sourceTree = "<group>"; };
+		DFE472EE26B480900059A2F9 /* PrivatBankAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivatBankAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +72,28 @@
 			children = (
 				DF86713526A1D5D700EED6EC /* AppDelegate.swift */,
 				DF86713726A1D5D700EED6EC /* SceneDelegate.swift */,
-				DF86713926A1D5D700EED6EC /* ViewController.swift */,
+				DF96871926C26FEB0052E79A /* Controllers */,
+				DF2E1FF226B6C8B700D989A6 /* CurrencyTableViewCell.swift */,
+				DFD395DB26AB2C180006F4B2 /* Implements.swift */,
+				DFE472EE26B480900059A2F9 /* PrivatBankAPI.swift */,
 				DF86713B26A1D5D700EED6EC /* Main.storyboard */,
 				DF86713E26A1D5D700EED6EC /* Assets.xcassets */,
 				DF86714026A1D5D700EED6EC /* LaunchScreen.storyboard */,
+				DF44AE1F26BFDBAF00428707 /* image23.png */,
+				DFC8D09126C12BC400FA5032 /* Img123.PNG */,
 				DF86714326A1D5D700EED6EC /* Info.plist */,
 			);
 			path = "Currency change";
+			sourceTree = "<group>";
+		};
+		DF96871926C26FEB0052E79A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DF86714B26A1DB4E00EED6EC /* CurrencyViewController.swift */,
+				DF86714D26A1DBF400EED6EC /* ChangeViewController.swift */,
+				DF96871C26C2724B0052E79A /* ProfileViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +155,9 @@
 			files = (
 				DF86714226A1D5D700EED6EC /* LaunchScreen.storyboard in Resources */,
 				DF86713F26A1D5D700EED6EC /* Assets.xcassets in Resources */,
+				DF44AE2026BFDBAF00428707 /* image23.png in Resources */,
 				DF86713D26A1D5D700EED6EC /* Main.storyboard in Resources */,
+				DFC8D09426C12BC400FA5032 /* Img123.PNG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +168,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF86713A26A1D5D700EED6EC /* ViewController.swift in Sources */,
+				DF2E1FF326B6C8B700D989A6 /* CurrencyTableViewCell.swift in Sources */,
 				DF86713626A1D5D700EED6EC /* AppDelegate.swift in Sources */,
+				DF86714C26A1DB4E00EED6EC /* CurrencyViewController.swift in Sources */,
+				DFD395DC26AB2C180006F4B2 /* Implements.swift in Sources */,
+				DF86714E26A1DBF400EED6EC /* ChangeViewController.swift in Sources */,
+				DFE472EF26B480900059A2F9 /* PrivatBankAPI.swift in Sources */,
+				DF96871D26C2724B0052E79A /* ProfileViewController.swift in Sources */,
 				DF86713826A1D5D700EED6EC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
