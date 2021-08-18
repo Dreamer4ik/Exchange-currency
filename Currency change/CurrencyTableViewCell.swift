@@ -21,8 +21,18 @@ class CurrencyTableViewCell: UITableViewCell {
             : "buy:\(currency.buy?.prefix(5) ?? "-") \(currency.baseCcy ?? "")"
         self.saleLabel.text = currency.ccy == "BTC" ? "sale:\(currency.sale?.prefix(7) ?? "-") \(currency.baseCcy ?? "")"
             : "sale:\(currency.sale?.prefix(5) ?? "-") \(currency.baseCcy ?? "")"
-        //Изменить RUR на руб RUB, из-за let не проходит
-       // self.ccyLabel.text = currency.ccy == "RUR" ? "\(currency.ccy = "RUB")" : "-"
+        //Измение RUR на руб RUB
+        if let ccy = currency.ccy {
+            switch ccy {
+            case "RUR":
+                let substring = currency.ccy!.prefix(2)
+                self.ccyLabel.text = String(substring) + "B"
+
+            default:
+                    self.ccyLabel.text = currency.ccy
+            }
+
+        }
     }
 
 }

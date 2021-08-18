@@ -296,12 +296,46 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qGw-mF-wCn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-439.13043478260875" y="966.96428571428567"/>
+            <point key="canvasLocation" x="-1858" y="967"/>
+        </scene>
+        <!--Test-->
+        <scene sceneID="w5S-wo-2Me">
+            <objects>
+                <navigationController id="mUM-F1-zXM" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Test" image="folder" catalog="system" id="DJZ-UK-2hb"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YQc-MO-xlE">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="dGd-G8-gAS" kind="relationship" relationship="rootViewController" id="tjM-Jg-P6C"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hjd-sZ-1pS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1014" y="967"/>
+        </scene>
+        <!--Convert Test View Controller-->
+        <scene sceneID="Tli-6X-Qdq">
+            <objects>
+                <viewController id="dGd-G8-gAS" customClass="ConvertTestViewController" customModule="Currency_change" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pm1-IY-bBe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="RPm-OK-Cgs"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="v5D-1i-gjm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xrh-Ve-uU7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-178" y="982"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="UU8-WK-ANe">
             <objects>
                 <tabBarController id="Y4w-1G-VGV" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="6ct-dT-USm"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vTd-Ka-N5l">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -311,6 +345,7 @@
                         <segue destination="DOM-fZ-hub" kind="relationship" relationship="viewControllers" id="T3b-pa-mle"/>
                         <segue destination="eyR-8C-Doa" kind="relationship" relationship="viewControllers" id="twH-uR-MoH"/>
                         <segue destination="UEp-JV-Vs1" kind="relationship" relationship="viewControllers" id="c95-a5-12q"/>
+                        <segue destination="mUM-F1-zXM" kind="relationship" relationship="viewControllers" id="QHz-dI-RMa"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AED-cK-KRH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -334,7 +369,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PCP-Ao-psm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1349.2753623188407" y="966.96428571428567"/>
+            <point key="canvasLocation" x="-3046" y="967"/>
         </scene>
         <!--Convert-->
         <scene sceneID="Gw5-ov-gf5">
@@ -359,6 +394,7 @@
     <resources>
         <image name="change" width="25" height="25"/>
         <image name="currency" width="25" height="25"/>
+        <image name="folder" catalog="system" width="128" height="97"/>
         <image name="profile" width="25" height="25"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

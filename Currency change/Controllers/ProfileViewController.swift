@@ -9,19 +9,23 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
-    var data:[String:String] = [:]
+    var data:[String:String] = [:] {
+        didSet {
+            signInButton.isEnabled = isButtonAvailable()
+        }
+    }
 
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var signInButton: UIButton!
     
-    override func viewDidLoad() {
+    
+        override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        //MARK: Почему меняется по нажатию ??? c Profile на Sign in
         tabBarItem.title = "Profile"
-        title = "Sign in"
+        navigationItem.title = "Sign in"
         
         configureViews()
         configureTextFields()
@@ -48,15 +52,10 @@ class ProfileViewController: UIViewController {
         signInButton.layer.borderColor = UIColor.gray.cgColor
         signInButton.layer.cornerRadius = 6
         
-        //MARK: делает серой и неактивной, но обратно в enabled не возвращается,дату пишет
-//        if emailField.text == "" && passwordField.text == "" {
-//            signInButton.isEnabled = false
-//            signInButton.alpha = 0.2
-//        }
-//        else {
-//            signInButton.isEnabled = true
-//            signInButton.alpha = 1
-//        }
+       
+            signInButton.isEnabled = false
+            signInButton.alpha = 0.2
+        
     }
     
     func configureTextFields() {
@@ -64,6 +63,15 @@ class ProfileViewController: UIViewController {
         passwordField.delegate = self
     }
     
+    private func isButtonAvailable() -> Bool {
+        if let login = data["login"] as? String, !login.isEmpty, let password = data["password"] as? String, !password.isEmpty {
+            signInButton.alpha = 1
+            return true
+        }
+        
+        signInButton.alpha = 0.2
+        return false
+    }
 
     /*
     // MARK: - Navigation

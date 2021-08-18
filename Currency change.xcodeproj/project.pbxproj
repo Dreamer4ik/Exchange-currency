@@ -8,7 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		DF2E1FF326B6C8B700D989A6 /* CurrencyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2E1FF226B6C8B700D989A6 /* CurrencyTableViewCell.swift */; };
+		DF2F215C26CAB3E700A904B3 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2F215B26CAB3E700A904B3 /* CustomTableViewCell.swift */; };
 		DF44AE2026BFDBAF00428707 /* image23.png in Resources */ = {isa = PBXBuildFile; fileRef = DF44AE1F26BFDBAF00428707 /* image23.png */; };
+		DF5C068426CC0C090075602A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5C068326CC0C090075602A /* Extensions.swift */; };
+		DF85EB3226C98A99006151A9 /* ConvertTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF85EB3126C98A99006151A9 /* ConvertTestViewController.swift */; };
+		DF85EB3626C98C4C006151A9 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = DF85EB3426C98C4C006151A9 /* arrow.png */; };
+		DF85EB3726C98C4C006151A9 /* dollar.png in Resources */ = {isa = PBXBuildFile; fileRef = DF85EB3526C98C4C006151A9 /* dollar.png */; };
+		DF85EB3A26C98D2B006151A9 /* CCYViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF85EB3926C98D2B006151A9 /* CCYViewController.swift */; };
+		DF85EB4326C99614006151A9 /* ConvertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF85EB4226C99614006151A9 /* ConvertView.swift */; };
 		DF86713626A1D5D700EED6EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF86713526A1D5D700EED6EC /* AppDelegate.swift */; };
 		DF86713826A1D5D700EED6EC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF86713726A1D5D700EED6EC /* SceneDelegate.swift */; };
 		DF86713D26A1D5D700EED6EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF86713B26A1D5D700EED6EC /* Main.storyboard */; };
@@ -18,13 +25,21 @@
 		DF86714E26A1DBF400EED6EC /* ChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF86714D26A1DBF400EED6EC /* ChangeViewController.swift */; };
 		DF96871D26C2724B0052E79A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF96871C26C2724B0052E79A /* ProfileViewController.swift */; };
 		DFC8D09426C12BC400FA5032 /* Img123.PNG in Resources */ = {isa = PBXBuildFile; fileRef = DFC8D09126C12BC400FA5032 /* Img123.PNG */; };
+		DFCCD20526CAFDD4006DCC3D /* arrowLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = DFCCD20426CAFDD4006DCC3D /* arrowLeft.png */; };
 		DFD395DC26AB2C180006F4B2 /* Implements.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD395DB26AB2C180006F4B2 /* Implements.swift */; };
 		DFE472EF26B480900059A2F9 /* PrivatBankAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE472EE26B480900059A2F9 /* PrivatBankAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DF2E1FF226B6C8B700D989A6 /* CurrencyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTableViewCell.swift; sourceTree = "<group>"; };
+		DF2F215B26CAB3E700A904B3 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		DF44AE1F26BFDBAF00428707 /* image23.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image23.png; sourceTree = "<group>"; };
+		DF5C068326CC0C090075602A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		DF85EB3126C98A99006151A9 /* ConvertTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertTestViewController.swift; sourceTree = "<group>"; };
+		DF85EB3426C98C4C006151A9 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
+		DF85EB3526C98C4C006151A9 /* dollar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dollar.png; sourceTree = "<group>"; };
+		DF85EB3926C98D2B006151A9 /* CCYViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCYViewController.swift; sourceTree = "<group>"; };
+		DF85EB4226C99614006151A9 /* ConvertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertView.swift; sourceTree = "<group>"; };
 		DF86713226A1D5D700EED6EC /* Currency change.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Currency change.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF86713526A1D5D700EED6EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF86713726A1D5D700EED6EC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +51,7 @@
 		DF86714D26A1DBF400EED6EC /* ChangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeViewController.swift; sourceTree = "<group>"; };
 		DF96871C26C2724B0052E79A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		DFC8D09126C12BC400FA5032 /* Img123.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Img123.PNG; sourceTree = "<group>"; };
+		DFCCD20426CAFDD4006DCC3D /* arrowLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrowLeft.png; sourceTree = "<group>"; };
 		DFD395DB26AB2C180006F4B2 /* Implements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Implements.swift; sourceTree = "<group>"; };
 		DFE472EE26B480900059A2F9 /* PrivatBankAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivatBankAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -51,6 +67,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF2F215D26CAB3F800A904B3 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				DF2F215B26CAB3E700A904B3 /* CustomTableViewCell.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		DF85EB3826C98C65006151A9 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				DFCCD20426CAFDD4006DCC3D /* arrowLeft.png */,
+				DF85EB3526C98C4C006151A9 /* dollar.png */,
+				DF85EB3426C98C4C006151A9 /* arrow.png */,
+				DF44AE1F26BFDBAF00428707 /* image23.png */,
+				DFC8D09126C12BC400FA5032 /* Img123.PNG */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		DF85EB4126C995B1006151A9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DF85EB4226C99614006151A9 /* ConvertView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		DF86712926A1D5D700EED6EC = {
 			isa = PBXGroup;
 			children = (
@@ -73,14 +117,16 @@
 				DF86713526A1D5D700EED6EC /* AppDelegate.swift */,
 				DF86713726A1D5D700EED6EC /* SceneDelegate.swift */,
 				DF96871926C26FEB0052E79A /* Controllers */,
-				DF2E1FF226B6C8B700D989A6 /* CurrencyTableViewCell.swift */,
+				DF85EB4126C995B1006151A9 /* Views */,
+				DF2F215D26CAB3F800A904B3 /* Custom */,
 				DFD395DB26AB2C180006F4B2 /* Implements.swift */,
+				DF2E1FF226B6C8B700D989A6 /* CurrencyTableViewCell.swift */,
+				DF5C068326CC0C090075602A /* Extensions.swift */,
 				DFE472EE26B480900059A2F9 /* PrivatBankAPI.swift */,
 				DF86713B26A1D5D700EED6EC /* Main.storyboard */,
 				DF86713E26A1D5D700EED6EC /* Assets.xcassets */,
 				DF86714026A1D5D700EED6EC /* LaunchScreen.storyboard */,
-				DF44AE1F26BFDBAF00428707 /* image23.png */,
-				DFC8D09126C12BC400FA5032 /* Img123.PNG */,
+				DF85EB3826C98C65006151A9 /* images */,
 				DF86714326A1D5D700EED6EC /* Info.plist */,
 			);
 			path = "Currency change";
@@ -92,6 +138,8 @@
 				DF86714B26A1DB4E00EED6EC /* CurrencyViewController.swift */,
 				DF86714D26A1DBF400EED6EC /* ChangeViewController.swift */,
 				DF96871C26C2724B0052E79A /* ProfileViewController.swift */,
+				DF85EB3126C98A99006151A9 /* ConvertTestViewController.swift */,
+				DF85EB3926C98D2B006151A9 /* CCYViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -154,9 +202,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF86714226A1D5D700EED6EC /* LaunchScreen.storyboard in Resources */,
+				DF85EB3626C98C4C006151A9 /* arrow.png in Resources */,
+				DF85EB3726C98C4C006151A9 /* dollar.png in Resources */,
 				DF86713F26A1D5D700EED6EC /* Assets.xcassets in Resources */,
 				DF44AE2026BFDBAF00428707 /* image23.png in Resources */,
 				DF86713D26A1D5D700EED6EC /* Main.storyboard in Resources */,
+				DFCCD20526CAFDD4006DCC3D /* arrowLeft.png in Resources */,
 				DFC8D09426C12BC400FA5032 /* Img123.PNG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -173,6 +224,11 @@
 				DF86714C26A1DB4E00EED6EC /* CurrencyViewController.swift in Sources */,
 				DFD395DC26AB2C180006F4B2 /* Implements.swift in Sources */,
 				DF86714E26A1DBF400EED6EC /* ChangeViewController.swift in Sources */,
+				DF85EB3A26C98D2B006151A9 /* CCYViewController.swift in Sources */,
+				DF2F215C26CAB3E700A904B3 /* CustomTableViewCell.swift in Sources */,
+				DF85EB4326C99614006151A9 /* ConvertView.swift in Sources */,
+				DF5C068426CC0C090075602A /* Extensions.swift in Sources */,
+				DF85EB3226C98A99006151A9 /* ConvertTestViewController.swift in Sources */,
 				DFE472EF26B480900059A2F9 /* PrivatBankAPI.swift in Sources */,
 				DF96871D26C2724B0052E79A /* ProfileViewController.swift in Sources */,
 				DF86713826A1D5D700EED6EC /* SceneDelegate.swift in Sources */,
