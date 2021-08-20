@@ -13,7 +13,7 @@
 		DF5C068426CC0C090075602A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5C068326CC0C090075602A /* Extensions.swift */; };
 		DF85EB3226C98A99006151A9 /* ConvertTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF85EB3126C98A99006151A9 /* ConvertTestViewController.swift */; };
 		DF85EB3626C98C4C006151A9 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = DF85EB3426C98C4C006151A9 /* arrow.png */; };
-		DF85EB3726C98C4C006151A9 /* dollar.png in Resources */ = {isa = PBXBuildFile; fileRef = DF85EB3526C98C4C006151A9 /* dollar.png */; };
+		DF85EB3726C98C4C006151A9 /* dollar1.png in Resources */ = {isa = PBXBuildFile; fileRef = DF85EB3526C98C4C006151A9 /* dollar1.png */; };
 		DF85EB3A26C98D2B006151A9 /* CCYViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF85EB3926C98D2B006151A9 /* CCYViewController.swift */; };
 		DF85EB4326C99614006151A9 /* ConvertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF85EB4226C99614006151A9 /* ConvertView.swift */; };
 		DF86713626A1D5D700EED6EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF86713526A1D5D700EED6EC /* AppDelegate.swift */; };
@@ -37,7 +37,7 @@
 		DF5C068326CC0C090075602A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		DF85EB3126C98A99006151A9 /* ConvertTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertTestViewController.swift; sourceTree = "<group>"; };
 		DF85EB3426C98C4C006151A9 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
-		DF85EB3526C98C4C006151A9 /* dollar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dollar.png; sourceTree = "<group>"; };
+		DF85EB3526C98C4C006151A9 /* dollar1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dollar1.png; sourceTree = "<group>"; };
 		DF85EB3926C98D2B006151A9 /* CCYViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCYViewController.swift; sourceTree = "<group>"; };
 		DF85EB4226C99614006151A9 /* ConvertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertView.swift; sourceTree = "<group>"; };
 		DF86713226A1D5D700EED6EC /* Currency change.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Currency change.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,7 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				DFCCD20426CAFDD4006DCC3D /* arrowLeft.png */,
-				DF85EB3526C98C4C006151A9 /* dollar.png */,
+				DF85EB3526C98C4C006151A9 /* dollar1.png */,
 				DF85EB3426C98C4C006151A9 /* arrow.png */,
 				DF44AE1F26BFDBAF00428707 /* image23.png */,
 				DFC8D09126C12BC400FA5032 /* Img123.PNG */,
@@ -203,7 +203,7 @@
 			files = (
 				DF86714226A1D5D700EED6EC /* LaunchScreen.storyboard in Resources */,
 				DF85EB3626C98C4C006151A9 /* arrow.png in Resources */,
-				DF85EB3726C98C4C006151A9 /* dollar.png in Resources */,
+				DF85EB3726C98C4C006151A9 /* dollar1.png in Resources */,
 				DF86713F26A1D5D700EED6EC /* Assets.xcassets in Resources */,
 				DF44AE2026BFDBAF00428707 /* image23.png in Resources */,
 				DF86713D26A1D5D700EED6EC /* Main.storyboard in Resources */,

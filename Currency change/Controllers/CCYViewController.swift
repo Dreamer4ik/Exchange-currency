@@ -9,8 +9,8 @@ import UIKit
 
 class CCYViewController: UIViewController {
     
-    var currencyCODE = ["$", "₽", "€", "₿"]
-    var currencyAR = ["USD", "RUB","EUR", "BTC"]
+    var currencySign = ["₴", "$", "₽", "€", "₿", ]
+    var currencyCode = ["UAH","USD", "RUB","EUR", "BTC"]
     
     
     lazy var tableView1:UITableView = {
@@ -49,6 +49,17 @@ class CCYViewController: UIViewController {
         ])
     }
     
+    let outputData: (String) -> ()
+    
+    init (outputData: @escaping (_ currencyCode:String) -> ()) {
+        self.outputData = outputData
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -62,7 +73,7 @@ class CCYViewController: UIViewController {
 
 extension CCYViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return currencyAR.count
+        return currencyCode.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -71,13 +82,20 @@ extension CCYViewController: UITableViewDataSource, UITableViewDelegate {
             return UITableViewCell()
         }
         
-        cell.configure(textCode:"\(currencyCODE[indexPath.row])", textName: "- \(currencyAR[indexPath.row])")
+        cell.configure(textCode:"\(currencySign[indexPath.row])", textName: "- \(currencyCode[indexPath.row])")
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       // print(currencyCode[indexPath.row])
+        
+        outputData(currencyCode[indexPath.row])
+        self.dismiss(animated: true, completion: nil)
     }
     
     

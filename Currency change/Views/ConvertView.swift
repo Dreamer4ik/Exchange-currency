@@ -13,7 +13,7 @@ class ConvertView: UIView {
        let view = UIImageView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.contentMode = .scaleAspectFit
-        view.image = UIImage(named: "dollar.png")
+        view.image = UIImage(named: "dollar1.png")
         return view
     }()
     
