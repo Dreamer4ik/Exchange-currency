@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF156EE326D128A400B1CC7A /* uah.png in Resources */ = {isa = PBXBuildFile; fileRef = DF156EE226D128A400B1CC7A /* uah.png */; };
+		DF29977026D0EB0F001EB1A8 /* logoMoney.png in Resources */ = {isa = PBXBuildFile; fileRef = DF29976F26D0EB0F001EB1A8 /* logoMoney.png */; };
 		DF2E1FF326B6C8B700D989A6 /* CurrencyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2E1FF226B6C8B700D989A6 /* CurrencyTableViewCell.swift */; };
 		DF2F215C26CAB3E700A904B3 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2F215B26CAB3E700A904B3 /* CustomTableViewCell.swift */; };
 		DF44AE2026BFDBAF00428707 /* image23.png in Resources */ = {isa = PBXBuildFile; fileRef = DF44AE1F26BFDBAF00428707 /* image23.png */; };
@@ -31,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DF156EE226D128A400B1CC7A /* uah.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uah.png; sourceTree = "<group>"; };
+		DF29976F26D0EB0F001EB1A8 /* logoMoney.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logoMoney.png; sourceTree = "<group>"; };
 		DF2E1FF226B6C8B700D989A6 /* CurrencyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTableViewCell.swift; sourceTree = "<group>"; };
 		DF2F215B26CAB3E700A904B3 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		DF44AE1F26BFDBAF00428707 /* image23.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image23.png; sourceTree = "<group>"; };
@@ -78,7 +82,9 @@
 		DF85EB3826C98C65006151A9 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				DF156EE226D128A400B1CC7A /* uah.png */,
 				DFCCD20426CAFDD4006DCC3D /* arrowLeft.png */,
+				DF29976F26D0EB0F001EB1A8 /* logoMoney.png */,
 				DF85EB3526C98C4C006151A9 /* dollar1.png */,
 				DF85EB3426C98C4C006151A9 /* arrow.png */,
 				DF44AE1F26BFDBAF00428707 /* image23.png */,
@@ -201,6 +207,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF156EE326D128A400B1CC7A /* uah.png in Resources */,
 				DF86714226A1D5D700EED6EC /* LaunchScreen.storyboard in Resources */,
 				DF85EB3626C98C4C006151A9 /* arrow.png in Resources */,
 				DF85EB3726C98C4C006151A9 /* dollar1.png in Resources */,
@@ -208,6 +215,7 @@
 				DF44AE2026BFDBAF00428707 /* image23.png in Resources */,
 				DF86713D26A1D5D700EED6EC /* Main.storyboard in Resources */,
 				DFCCD20526CAFDD4006DCC3D /* arrowLeft.png in Resources */,
+				DF29977026D0EB0F001EB1A8 /* logoMoney.png in Resources */,
 				DFC8D09426C12BC400FA5032 /* Img123.PNG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

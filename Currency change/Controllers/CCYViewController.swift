@@ -10,7 +10,7 @@ import UIKit
 class CCYViewController: UIViewController {
     
     var currencySign = ["₴", "$", "₽", "€", "₿", ]
-    var currencyCode = ["UAH","USD", "RUB","EUR", "BTC"]
+    var currencyCode = ["UAH","USD", "RUR","EUR", "BTC"]
     
     
     lazy var tableView1:UITableView = {
@@ -82,7 +82,7 @@ extension CCYViewController: UITableViewDataSource, UITableViewDelegate {
             return UITableViewCell()
         }
         
-        cell.configure(textCode:"\(currencySign[indexPath.row])", textName: "- \(currencyCode[indexPath.row])")
+        cell.configure(textCode:"\(currencySign[indexPath.row])", textName: currencyCode[indexPath.row])
         
         return cell
     }

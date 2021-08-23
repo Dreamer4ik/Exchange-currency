@@ -21,5 +21,10 @@ extension String {
 //        return passwordPred.evaluate(with: self)
        return self.count >= 8
     }
+    
+    func dropChar() -> String {
+        let newString = String(self.prefix(5))
+        return newString
+    }
 }
 

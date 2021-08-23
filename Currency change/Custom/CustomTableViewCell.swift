@@ -51,8 +51,13 @@ class CustomTableViewCell: UITableViewCell {
     }
     
     func configure(textCode:String,textName:String) {
+        if textName == "RUR" {
+            labelName.text = "- " + String(textName.dropLast()) + "B"
+        } else {
+            labelName.text = "- " + textName
+
+        }
         labelCode.text = textCode
-        labelName.text = textName
     }
     
 //    override func prepareForReuse() {

@@ -11,7 +11,31 @@ class CurrencyViewController: UIViewController, UITableViewDelegate, UITableView
    
     var activityIndicator: UIActivityIndicatorView!
     var currencies:[Currency] = []
+    var timer:Timer?
+    private var totalSeconds = 0
     
+    lazy var buttonResetTime:UIButton = {
+        let view = UIButton()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.layer.cornerRadius = 8
+        view.backgroundColor = .systemBlue
+        view.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+        view.setAttributedTitle(NSAttributedString(string: "Update", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white]), for: .normal)
+        view.setAttributedTitle(NSAttributedString(string: "", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white]), for: .highlighted)
+        view.clipsToBounds = true
+        view.layer.cornerRadius = 50
+        view.addTarget(self, action: #selector(buttonResetAction), for: .touchUpInside)
+        
+        return view
+    }()
+    
+    
+    lazy var labelTimer:UILabel = {
+        let view = UILabel()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.font = .boldSystemFont(ofSize: 18)
+        return view
+    }()
     
     @IBOutlet weak var tableView1: UITableView!
     
@@ -24,9 +48,38 @@ class CurrencyViewController: UIViewController, UITableViewDelegate, UITableView
 
         configureActivityIndicator()
         configureTableView()
+        addSubViews()
+        activateConstrains()
         
         fetchExchangeRates(.cash)
 
+    }
+    
+    @objc func buttonResetAction(sender: UIButton!) {
+        fetchExchangeRates(.cash)
+        totalSeconds = 0
+    }
+    
+    func addSubViews() {
+        view.addSubview(buttonResetTime)
+        view.addSubview(labelTimer)
+
+
+    }
+    
+    func activateConstrains() {
+        NSLayoutConstraint.activate([
+            labelTimer.topAnchor.constraint(equalTo: view.topAnchor, constant: 600),
+            labelTimer.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15),
+            
+            buttonResetTime.topAnchor.constraint(equalTo: labelTimer.bottomAnchor, constant: 5),
+            buttonResetTime.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15),
+            buttonResetTime.widthAnchor.constraint(equalToConstant: 100),
+            buttonResetTime.heightAnchor.constraint(equalToConstant: 100)
+        
+        ])
+        
+        
     }
     
     //MARK: DataSource
@@ -59,6 +112,7 @@ class CurrencyViewController: UIViewController, UITableViewDelegate, UITableView
                     self.currencies = currencies
                     DispatchQueue.main.async {
                         self.tableView1.reloadData()
+                        self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.updateTime), userInfo: nil, repeats: true)
                     }
                 case .failure(let error):
                     print(error)
@@ -94,7 +148,19 @@ class CurrencyViewController: UIViewController, UITableViewDelegate, UITableView
             break
         }
     }
+    //поставить после получения данных ресет или после нажатия на кнопку
+    @objc func updateTime()  {
+        totalSeconds += 1
+        print(formatResult(totalSeconds))
+        labelTimer.text = "Time without update: \(formatResult(totalSeconds))"
+    }
     
-    
+    //MARK: - Private
+        private func formatResult(_ int: Int) -> String {
+            let seconds = int % 60
+            let minutes = (int / 60) % 60
+            //     let hours = totalSeconds / 3600
+            return String.init(format: "%02d:%02d", minutes, seconds)
+        }
 
 }
