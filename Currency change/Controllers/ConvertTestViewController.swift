@@ -117,6 +117,21 @@ class ConvertTestViewController: UIViewController {
         return view
     }()
     
+    //MARK: TEST
+    
+    lazy var testField:UITextField = {
+        let view = UITextField()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.textAlignment = .right
+        view.backgroundColor = .white
+        view.layer.borderColor = UIColor.black.cgColor
+        view.layer.borderWidth = 2
+        view.layer.cornerRadius = 8
+        view.layer.sublayerTransform = CATransform3DMakeTranslation(-15, 0, 0)
+        view.delegate = self
+        return view
+    }()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -132,10 +147,7 @@ class ConvertTestViewController: UIViewController {
         
     }
     
-//    func configure(currency: Currency){
-//        labelCurrently.text = currency.sale
-//
-//    }
+
     
     func configureColor() {
         view.backgroundColor = UIColor(hue: 240/360, saturation: 100/100, brightness: 50/100, alpha: 1.0)
@@ -163,12 +175,15 @@ class ConvertTestViewController: UIViewController {
             self.multiplicationСourse = Double((chosenCCY?.sale ?? ""))
         }
     }
-    //изменения в текст лейблах
+    //MARK: умножение на курс
     @objc func editingChanged(_ sender: UITextField!) {
         switch sender {
         case postField:
             print(sender.text ?? "")
-            self.getField.text = (sender.text ?? "") + "22" //тут сделать умножение на курс
+            let doubleValue = (Double(sender.text ?? "-") ?? 0.0) * (multiplicationСourse ?? 0.0)
+            self.getField.text = String(doubleValue) //тут сделать умножение на курс
+           
+            
         case getField:
             print(sender.text ?? "")
         
@@ -184,7 +199,7 @@ class ConvertTestViewController: UIViewController {
         print("Post: \(dataPost)")
         print("Get: \(dataGet)")
         // print(currencies)
-        print("Multiplication: \(multiplicationСourse)")
+        print("Multiplication: \(multiplicationСourse ?? 0)")
         
     }
     
@@ -199,6 +214,7 @@ class ConvertTestViewController: UIViewController {
         view.addSubview(labelPost)
         view.addSubview(viewLine)
         view.addSubview(buttonTest)
+        view.addSubview(testField)
         
     }
     
@@ -243,13 +259,16 @@ class ConvertTestViewController: UIViewController {
             viewLine.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: 0),
             viewLine.heightAnchor.constraint(equalToConstant: 2),
             
-            
+            //MARK: TEST
             buttonTest.topAnchor.constraint(equalTo: viewLine.bottomAnchor, constant: 80),
             buttonTest.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
             buttonTest.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
             buttonTest.heightAnchor.constraint(equalToConstant: 40),
             
-            
+            testField.topAnchor.constraint(equalTo: buttonTest.bottomAnchor, constant: 80),
+            testField.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            testField.widthAnchor.constraint(equalToConstant: 220),
+            testField.heightAnchor.constraint(equalToConstant: 45),
             
             
             
@@ -258,33 +277,33 @@ class ConvertTestViewController: UIViewController {
     }
     //MARK: POST
     func updateViewsWithpostAction(_ code:String) {
-        //просмотреть
         let chosenCCY = self.currencies.first { $0.ccy == code }
         print(chosenCCY?.sale?.prefix(2) ?? "-")
-        
-        labelCurrently.text = "1 \(code == "RUR" ? String(code.dropLast()) + "B" : code) - \((chosenCCY?.sale ?? "").dropChar()) UAH"
-        
-        labelCurrently.text = "1 \(code == "BTC" ? code : "" ) - \((chosenCCY?.sale?.prefix(8) ?? "")) USD"
+        labelCurrently.text = "1 \(code) - \((chosenCCY?.sale ?? "").dropChar()) UAH"
         
         multiplicationСourse = Double((chosenCCY?.sale ?? ""))
-        
-        postconvertView.codeLabel.text = (code == "RUR" ? String(code.dropLast()) + "B" : code)
+        postconvertView.codeLabel.text = code
+
         switch code {
         case "USD":
             postconvertView.signImageView.image = UIImage(named: "dollar")
-            
         case "RUR":
             postconvertView.signImageView.image = UIImage(named: "rub")
+            labelCurrently.text = "1 \(code == "RUR" ? String(code.dropLast()) + "B" : code) - \((chosenCCY?.sale ?? "").dropChar()) UAH"
+            
+            postconvertView.codeLabel.text = (code == "RUR" ? String(code.dropLast()) + "B" : code)
             
         case "EUR":
             postconvertView.signImageView.image = UIImage(named: "euro")
             
         case "BTC":
             postconvertView.signImageView.image = UIImage(named: "btc")
-           // let btcLabel =
+            labelCurrently.text = "1 \(code) - \((chosenCCY?.sale?.prefix(8) ?? "")) USD"
             
         case "UAH":
             postconvertView.signImageView.image = UIImage(named: "uah")
+//            let chosenCCY = self.currencies.first { $0.ccy == "USD" }
+//            labelCurrently.text = "1 USD - \((chosenCCY?.sale ?? "").dropChar()) UAH"
             
             
         default:
@@ -293,16 +312,18 @@ class ConvertTestViewController: UIViewController {
     }
     //MARK: GET
     func updateViewsWithgetAction(_ code:String) {
-        //просмотреть
         let chosenCCY = self.currencies.first { $0.ccy == code }
+        
         print(chosenCCY?.sale?.prefix(2) ?? "-")
-        getconvertView.codeLabel.text = (code == "RUR" ? String(code.dropLast()) + "B" : code)
+        getconvertView.codeLabel.text = code
+        
         switch code {
         case "USD":
             getconvertView.signImageView.image = UIImage(named: "dollar")
             
         case "RUR":
             getconvertView.signImageView.image = UIImage(named: "rub")
+            getconvertView.codeLabel.text = String(code.dropLast()) + "B"
             
         case "EUR":
             getconvertView.signImageView.image = UIImage(named: "euro")
@@ -312,6 +333,8 @@ class ConvertTestViewController: UIViewController {
             
         case "UAH":
             getconvertView.signImageView.image = UIImage(named: "uah")
+            
+            
             
         default:
             break
@@ -351,7 +374,26 @@ extension ConvertTestViewController : UITextFieldDelegate {
         if textField == getField {
             dataGet = textField.text ?? ""
         }
+                  
+        }
+        
+       
+    
+    // изменение во время ввода
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        if textField == testField    {
+            if let field = textField.text, !field.isValidField(){
+                textField.backgroundColor = .red
+                
+            }
+            else {
+                textField.backgroundColor = .white
+            }
+            
+        }
     }
+    
+
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()

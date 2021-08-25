@@ -54,10 +54,10 @@ class CurrencyViewController: UIViewController, UITableViewDelegate, UITableView
         fetchExchangeRates(.cash)
 
     }
-    
+    //уточнить за reloadData() , идет обновление курса ??? 
     @objc func buttonResetAction(sender: UIButton!) {
-        fetchExchangeRates(.cash)
-        totalSeconds = 0
+        totalSeconds = 0 
+        tableView1.reloadData()
     }
     
     func addSubViews() {
@@ -148,7 +148,6 @@ class CurrencyViewController: UIViewController, UITableViewDelegate, UITableView
             break
         }
     }
-    //поставить после получения данных ресет или после нажатия на кнопку
     @objc func updateTime()  {
         totalSeconds += 1
         print(formatResult(totalSeconds))
