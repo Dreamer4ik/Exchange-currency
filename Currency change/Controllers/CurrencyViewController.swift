@@ -54,10 +54,11 @@ class CurrencyViewController: UIViewController, UITableViewDelegate, UITableView
         fetchExchangeRates(.cash)
 
     }
-    //уточнить за reloadData() , идет обновление курса ??? 
+ 
     @objc func buttonResetAction(sender: UIButton!) {
-        totalSeconds = 0 
-        tableView1.reloadData()
+        timer?.invalidate()
+        totalSeconds = 0
+        fetchExchangeRates(.cash)
     }
     
     func addSubViews() {
@@ -148,10 +149,16 @@ class CurrencyViewController: UIViewController, UITableViewDelegate, UITableView
             break
         }
     }
+ 
     @objc func updateTime()  {
         totalSeconds += 1
         print(formatResult(totalSeconds))
         labelTimer.text = "Time without update: \(formatResult(totalSeconds))"
+        if totalSeconds > 59 {
+            timer?.invalidate()
+            totalSeconds = 0
+            fetchExchangeRates(.cash)
+        }
     }
     
     //MARK: - Private

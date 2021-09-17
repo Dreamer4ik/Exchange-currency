@@ -1,5 +1,5 @@
 //
-//  ConvertTestViewController.swift
+//  ConvertViewController.swift
 //  Currency change
 //
 //  Created by Ivan Potapenko on 15.08.2021.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ConvertTestViewController: UIViewController {
+class ConvertViewController: UIViewController {
     
     var dataPost:String = ""
     var dataGet:String = ""
@@ -136,12 +136,11 @@ class ConvertTestViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        tabBarItem.title = "Test"
-        navigationItem.title = "Testing"
+        navigationItem.title = "Convert"
         addSubViews()
         activateConstrains()
         fetchExchangeRates(.cash)
-        //configureColor()
+        configureColor()
         
         
         
@@ -150,7 +149,18 @@ class ConvertTestViewController: UIViewController {
 
     
     func configureColor() {
-        view.backgroundColor = UIColor(hue: 240/360, saturation: 100/100, brightness: 50/100, alpha: 1.0)
+        view.backgroundColor = UIColor(hue: 0.6667, saturation: 0.77, brightness: 0.43, alpha: 1.0)
+        
+        //MARK: почему не меняет цвет ???
+        tabBarItem.badgeColor = UIColor(hue: 0.3333, saturation: 1, brightness: 0.39, alpha: 1.0)
+        
+        labelCurrently.textColor = UIColor(hue: 0.1083, saturation: 0.74, brightness: 0.89, alpha: 1.0)
+        
+        labelPost.textColor = .white
+        labelGet.textColor = .white
+        labelText.textColor = .white
+        
+        viewLine.backgroundColor = .white
     }
     //MARK: - Helper Functions
     func fetchExchangeRates(_ rate:Rate ) {
@@ -175,7 +185,7 @@ class ConvertTestViewController: UIViewController {
             self.multiplicationСourse = Double((chosenCCY?.sale ?? ""))
         }
     }
-    //MARK: умножение на курс
+    //MARK: УМНОЖЕНИЕ
     @objc func editingChanged(_ sender: UITextField!) {
         switch sender {
         case postField:
@@ -213,8 +223,8 @@ class ConvertTestViewController: UIViewController {
         view.addSubview(labelGet)
         view.addSubview(labelPost)
         view.addSubview(viewLine)
-        view.addSubview(buttonTest)
-        view.addSubview(testField)
+//        view.addSubview(buttonTest)
+//        view.addSubview(testField)
         
     }
     
@@ -260,15 +270,15 @@ class ConvertTestViewController: UIViewController {
             viewLine.heightAnchor.constraint(equalToConstant: 2),
             
             //MARK: TEST
-            buttonTest.topAnchor.constraint(equalTo: viewLine.bottomAnchor, constant: 80),
-            buttonTest.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-            buttonTest.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
-            buttonTest.heightAnchor.constraint(equalToConstant: 40),
-            
-            testField.topAnchor.constraint(equalTo: buttonTest.bottomAnchor, constant: 80),
-            testField.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-            testField.widthAnchor.constraint(equalToConstant: 220),
-            testField.heightAnchor.constraint(equalToConstant: 45),
+//            buttonTest.topAnchor.constraint(equalTo: viewLine.bottomAnchor, constant: 80),
+//            buttonTest.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+//            buttonTest.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+//            buttonTest.heightAnchor.constraint(equalToConstant: 40),
+//
+//            testField.topAnchor.constraint(equalTo: buttonTest.bottomAnchor, constant: 80),
+//            testField.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+//            testField.widthAnchor.constraint(equalToConstant: 220),
+//            testField.heightAnchor.constraint(equalToConstant: 45),
             
             
             
@@ -286,7 +296,7 @@ class ConvertTestViewController: UIViewController {
 
         switch code {
         case "USD":
-            postconvertView.signImageView.image = UIImage(named: "dollar")
+            postconvertView.signImageView.image = UIImage(named: "usd")
         case "RUR":
             postconvertView.signImageView.image = UIImage(named: "rub")
             labelCurrently.text = "1 \(code == "RUR" ? String(code.dropLast()) + "B" : code) - \((chosenCCY?.sale ?? "").dropChar()) UAH"
@@ -294,7 +304,7 @@ class ConvertTestViewController: UIViewController {
             postconvertView.codeLabel.text = (code == "RUR" ? String(code.dropLast()) + "B" : code)
             
         case "EUR":
-            postconvertView.signImageView.image = UIImage(named: "euro")
+            postconvertView.signImageView.image = UIImage(named: "eur")
             
         case "BTC":
             postconvertView.signImageView.image = UIImage(named: "btc")
@@ -319,14 +329,14 @@ class ConvertTestViewController: UIViewController {
         
         switch code {
         case "USD":
-            getconvertView.signImageView.image = UIImage(named: "dollar")
+            getconvertView.signImageView.image = UIImage(named: "usd")
             
         case "RUR":
             getconvertView.signImageView.image = UIImage(named: "rub")
             getconvertView.codeLabel.text = String(code.dropLast()) + "B"
             
         case "EUR":
-            getconvertView.signImageView.image = UIImage(named: "euro")
+            getconvertView.signImageView.image = UIImage(named: "eur")
             
         case "BTC":
             getconvertView.signImageView.image = UIImage(named: "btc")
@@ -364,7 +374,7 @@ class ConvertTestViewController: UIViewController {
 }
 
 // MARK: EXTENSIONS
-extension ConvertTestViewController : UITextFieldDelegate {
+extension ConvertViewController : UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         if textField == postField {
@@ -381,7 +391,7 @@ extension ConvertTestViewController : UITextFieldDelegate {
     
     // изменение во время ввода
     func textFieldDidChangeSelection(_ textField: UITextField) {
-        if textField == testField    {
+        if textField == postField || textField == getField    {
             if let field = textField.text, !field.isValidField(){
                 textField.backgroundColor = .red
                 
@@ -391,6 +401,10 @@ extension ConvertTestViewController : UITextFieldDelegate {
             }
             
         }
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.keyboardType = .numbersAndPunctuation
     }
     
 

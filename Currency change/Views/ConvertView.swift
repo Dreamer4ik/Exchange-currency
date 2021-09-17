@@ -13,7 +13,7 @@ class ConvertView: UIView {
        let view = UIImageView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.contentMode = .scaleAspectFit
-        view.image = UIImage(named: "dollar1.png")
+        view.image = UIImage(named: "usd")
         return view
     }()
     
@@ -46,7 +46,8 @@ class ConvertView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .brown
+        //MARK: Change color post view
+        backgroundColor = UIColor(hue: 0.3333, saturation: 1, brightness: 0.39, alpha: 1.0)
         layer.cornerRadius = 8
         clipsToBounds = true
         addSubViews()

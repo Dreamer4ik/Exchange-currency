@@ -7,13 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DF156EE326D128A400B1CC7A /* uah.png in Resources */ = {isa = PBXBuildFile; fileRef = DF156EE226D128A400B1CC7A /* uah.png */; };
 		DF29977026D0EB0F001EB1A8 /* logoMoney.png in Resources */ = {isa = PBXBuildFile; fileRef = DF29976F26D0EB0F001EB1A8 /* logoMoney.png */; };
 		DF2E1FF326B6C8B700D989A6 /* CurrencyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2E1FF226B6C8B700D989A6 /* CurrencyTableViewCell.swift */; };
 		DF2F215C26CAB3E700A904B3 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2F215B26CAB3E700A904B3 /* CustomTableViewCell.swift */; };
 		DF44AE2026BFDBAF00428707 /* image23.png in Resources */ = {isa = PBXBuildFile; fileRef = DF44AE1F26BFDBAF00428707 /* image23.png */; };
 		DF5C068426CC0C090075602A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5C068326CC0C090075602A /* Extensions.swift */; };
-		DF85EB3226C98A99006151A9 /* ConvertTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF85EB3126C98A99006151A9 /* ConvertTestViewController.swift */; };
+		DF85EB3226C98A99006151A9 /* ConvertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF85EB3126C98A99006151A9 /* ConvertViewController.swift */; };
 		DF85EB3626C98C4C006151A9 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = DF85EB3426C98C4C006151A9 /* arrow.png */; };
 		DF85EB3726C98C4C006151A9 /* dollar1.png in Resources */ = {isa = PBXBuildFile; fileRef = DF85EB3526C98C4C006151A9 /* dollar1.png */; };
 		DF85EB3A26C98D2B006151A9 /* CCYViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF85EB3926C98D2B006151A9 /* CCYViewController.swift */; };
@@ -24,7 +23,6 @@
 		DF86713F26A1D5D700EED6EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF86713E26A1D5D700EED6EC /* Assets.xcassets */; };
 		DF86714226A1D5D700EED6EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF86714026A1D5D700EED6EC /* LaunchScreen.storyboard */; };
 		DF86714C26A1DB4E00EED6EC /* CurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF86714B26A1DB4E00EED6EC /* CurrencyViewController.swift */; };
-		DF86714E26A1DBF400EED6EC /* ChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF86714D26A1DBF400EED6EC /* ChangeViewController.swift */; };
 		DF96871D26C2724B0052E79A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF96871C26C2724B0052E79A /* ProfileViewController.swift */; };
 		DFC8D09426C12BC400FA5032 /* Img123.PNG in Resources */ = {isa = PBXBuildFile; fileRef = DFC8D09126C12BC400FA5032 /* Img123.PNG */; };
 		DFCCD20526CAFDD4006DCC3D /* arrowLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = DFCCD20426CAFDD4006DCC3D /* arrowLeft.png */; };
@@ -33,13 +31,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DF156EE226D128A400B1CC7A /* uah.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uah.png; sourceTree = "<group>"; };
 		DF29976F26D0EB0F001EB1A8 /* logoMoney.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logoMoney.png; sourceTree = "<group>"; };
 		DF2E1FF226B6C8B700D989A6 /* CurrencyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTableViewCell.swift; sourceTree = "<group>"; };
 		DF2F215B26CAB3E700A904B3 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		DF44AE1F26BFDBAF00428707 /* image23.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image23.png; sourceTree = "<group>"; };
 		DF5C068326CC0C090075602A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		DF85EB3126C98A99006151A9 /* ConvertTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertTestViewController.swift; sourceTree = "<group>"; };
+		DF85EB3126C98A99006151A9 /* ConvertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertViewController.swift; sourceTree = "<group>"; };
 		DF85EB3426C98C4C006151A9 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
 		DF85EB3526C98C4C006151A9 /* dollar1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dollar1.png; sourceTree = "<group>"; };
 		DF85EB3926C98D2B006151A9 /* CCYViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCYViewController.swift; sourceTree = "<group>"; };
@@ -52,7 +49,6 @@
 		DF86714126A1D5D700EED6EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF86714326A1D5D700EED6EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF86714B26A1DB4E00EED6EC /* CurrencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyViewController.swift; sourceTree = "<group>"; };
-		DF86714D26A1DBF400EED6EC /* ChangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeViewController.swift; sourceTree = "<group>"; };
 		DF96871C26C2724B0052E79A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		DFC8D09126C12BC400FA5032 /* Img123.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Img123.PNG; sourceTree = "<group>"; };
 		DFCCD20426CAFDD4006DCC3D /* arrowLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrowLeft.png; sourceTree = "<group>"; };
@@ -82,7 +78,6 @@
 		DF85EB3826C98C65006151A9 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				DF156EE226D128A400B1CC7A /* uah.png */,
 				DFCCD20426CAFDD4006DCC3D /* arrowLeft.png */,
 				DF29976F26D0EB0F001EB1A8 /* logoMoney.png */,
 				DF85EB3526C98C4C006151A9 /* dollar1.png */,
@@ -142,9 +137,8 @@
 			isa = PBXGroup;
 			children = (
 				DF86714B26A1DB4E00EED6EC /* CurrencyViewController.swift */,
-				DF86714D26A1DBF400EED6EC /* ChangeViewController.swift */,
 				DF96871C26C2724B0052E79A /* ProfileViewController.swift */,
-				DF85EB3126C98A99006151A9 /* ConvertTestViewController.swift */,
+				DF85EB3126C98A99006151A9 /* ConvertViewController.swift */,
 				DF85EB3926C98D2B006151A9 /* CCYViewController.swift */,
 			);
 			path = Controllers;
@@ -207,7 +201,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF156EE326D128A400B1CC7A /* uah.png in Resources */,
 				DF86714226A1D5D700EED6EC /* LaunchScreen.storyboard in Resources */,
 				DF85EB3626C98C4C006151A9 /* arrow.png in Resources */,
 				DF85EB3726C98C4C006151A9 /* dollar1.png in Resources */,
@@ -231,12 +224,11 @@
 				DF86713626A1D5D700EED6EC /* AppDelegate.swift in Sources */,
 				DF86714C26A1DB4E00EED6EC /* CurrencyViewController.swift in Sources */,
 				DFD395DC26AB2C180006F4B2 /* Implements.swift in Sources */,
-				DF86714E26A1DBF400EED6EC /* ChangeViewController.swift in Sources */,
 				DF85EB3A26C98D2B006151A9 /* CCYViewController.swift in Sources */,
 				DF2F215C26CAB3E700A904B3 /* CustomTableViewCell.swift in Sources */,
 				DF85EB4326C99614006151A9 /* ConvertView.swift in Sources */,
 				DF5C068426CC0C090075602A /* Extensions.swift in Sources */,
-				DF85EB3226C98A99006151A9 /* ConvertTestViewController.swift in Sources */,
+				DF85EB3226C98A99006151A9 /* ConvertViewController.swift in Sources */,
 				DFE472EF26B480900059A2F9 /* PrivatBankAPI.swift in Sources */,
 				DF96871D26C2724B0052E79A /* ProfileViewController.swift in Sources */,
 				DF86713826A1D5D700EED6EC /* SceneDelegate.swift in Sources */,
