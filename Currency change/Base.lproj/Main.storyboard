@@ -270,10 +270,10 @@
             </objects>
             <point key="canvasLocation" x="-178" y="982"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Custom Tab Bar Controller-->
         <scene sceneID="UU8-WK-ANe">
             <objects>
-                <tabBarController id="Y4w-1G-VGV" sceneMemberID="viewController">
+                <tabBarController id="Y4w-1G-VGV" customClass="CustomTabBarController" customModule="Currency_change" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="6ct-dT-USm"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vTd-Ka-N5l">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>

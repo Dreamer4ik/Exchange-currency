@@ -12,6 +12,7 @@
 		DF2F215C26CAB3E700A904B3 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2F215B26CAB3E700A904B3 /* CustomTableViewCell.swift */; };
 		DF44AE2026BFDBAF00428707 /* image23.png in Resources */ = {isa = PBXBuildFile; fileRef = DF44AE1F26BFDBAF00428707 /* image23.png */; };
 		DF5C068426CC0C090075602A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5C068326CC0C090075602A /* Extensions.swift */; };
+		DF616ABB26F732C2008D7EE8 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF616ABA26F732C2008D7EE8 /* CustomTabBarController.swift */; };
 		DF85EB3226C98A99006151A9 /* ConvertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF85EB3126C98A99006151A9 /* ConvertViewController.swift */; };
 		DF85EB3626C98C4C006151A9 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = DF85EB3426C98C4C006151A9 /* arrow.png */; };
 		DF85EB3726C98C4C006151A9 /* dollar1.png in Resources */ = {isa = PBXBuildFile; fileRef = DF85EB3526C98C4C006151A9 /* dollar1.png */; };
@@ -36,6 +37,7 @@
 		DF2F215B26CAB3E700A904B3 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		DF44AE1F26BFDBAF00428707 /* image23.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image23.png; sourceTree = "<group>"; };
 		DF5C068326CC0C090075602A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		DF616ABA26F732C2008D7EE8 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		DF85EB3126C98A99006151A9 /* ConvertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertViewController.swift; sourceTree = "<group>"; };
 		DF85EB3426C98C4C006151A9 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
 		DF85EB3526C98C4C006151A9 /* dollar1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dollar1.png; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				DF2F215B26CAB3E700A904B3 /* CustomTableViewCell.swift */,
+				DF616ABA26F732C2008D7EE8 /* CustomTabBarController.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 				DF5C068426CC0C090075602A /* Extensions.swift in Sources */,
 				DF85EB3226C98A99006151A9 /* ConvertViewController.swift in Sources */,
 				DFE472EF26B480900059A2F9 /* PrivatBankAPI.swift in Sources */,
+				DF616ABB26F732C2008D7EE8 /* CustomTabBarController.swift in Sources */,
 				DF96871D26C2724B0052E79A /* ProfileViewController.swift in Sources */,
 				DF86713826A1D5D700EED6EC /* SceneDelegate.swift in Sources */,
 			);
