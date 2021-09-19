@@ -151,8 +151,7 @@ class ConvertViewController: UIViewController {
     func configureColor() {
         view.backgroundColor = UIColor(hue: 0.6667, saturation: 0.77, brightness: 0.43, alpha: 1.0)
         
-        //MARK: почему не меняет цвет ???
-        tabBarItem.badgeColor = UIColor(hue: 0.3333, saturation: 1, brightness: 0.39, alpha: 1.0)
+       
         
         labelCurrently.textColor = UIColor(hue: 0.1083, saturation: 0.74, brightness: 0.89, alpha: 1.0)
         

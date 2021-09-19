@@ -46,7 +46,7 @@ class ConvertView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        //MARK: Change color post view
+        //MARK: Change color get/post view
         backgroundColor = UIColor(hue: 0.3333, saturation: 1, brightness: 0.39, alpha: 1.0)
         layer.cornerRadius = 8
         clipsToBounds = true

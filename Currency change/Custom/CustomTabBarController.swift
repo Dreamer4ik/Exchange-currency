@@ -59,8 +59,8 @@ class CustomTabBarController: UITabBarController {
     }
 
     private func configureTabBar() {
-        tabBar.barTintColor = .white
-        tabBar.tintColor = .red
+        tabBar.barTintColor = .systemBlue
+        tabBar.tintColor = .white
 //        tabBar.tintColor = UIColor(red: 1, green: 0, blue: 0.62, alpha: 1)
         tabBar.unselectedItemTintColor = UIColor(red: 0.212, green: 0.212, blue: 0.212, alpha: 1)
         
@@ -94,11 +94,14 @@ extension CustomTabBarController  {
         if let title = item.title {
             switch title {
             case "Currency":
-                tabBar.barTintColor = .white
+                tabBar.barTintColor = .systemBlue
+                tabBar.tintColor = .white
             case "Convert":
-                tabBar.barTintColor = .white
+                tabBar.barTintColor = UIColor(hue: 0.3333, saturation: 1, brightness: 0.39, alpha: 1.0)
+                tabBar.tintColor = .orange
             default:
                 tabBar.barTintColor = .white
+                tabBar.tintColor = .systemBlue
             }
         }
     }
