@@ -22,7 +22,7 @@ extension String {
         return self.count >= 8
     }
     
-    
+    // проверка поля на валидность
     func isValidField() -> Bool {
        // let fieldRegEx = "^[0-9]{1,3}(,[0-9]{3})*(.[0-9]+)*$"
         let fieldRegEx = "[0-9]+[.]?[0-9]*"

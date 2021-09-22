@@ -97,8 +97,9 @@ extension CustomTabBarController  {
                 tabBar.barTintColor = .systemBlue
                 tabBar.tintColor = .white
             case "Convert":
-                tabBar.barTintColor = UIColor(hue: 0.3333, saturation: 1, brightness: 0.39, alpha: 1.0)
-                tabBar.tintColor = .orange
+//                tabBar.barTintColor = UIColor(hue: 0.3333, saturation: 1, brightness: 0.39, alpha: 1.0)
+                tabBar.barTintColor = .white
+                tabBar.tintColor = .systemBlue
             default:
                 tabBar.barTintColor = .white
                 tabBar.tintColor = .systemBlue

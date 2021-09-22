@@ -13,6 +13,7 @@ class ConvertViewController: UIViewController {
     var dataGet:String = ""
     var multiplicationСourse:Double? = 0
     var currencies:[Currency] = []
+    private var defaultCode = "USD"
     
     
     lazy var postconvertView: ConvertView = {
@@ -102,37 +103,6 @@ class ConvertViewController: UIViewController {
         return view
     }()
     
-    
-    lazy var buttonTest:UIButton = {
-        let view = UIButton()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.layer.cornerRadius = 8
-        view.backgroundColor = .systemBlue
-        view.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
-        view.setAttributedTitle(NSAttributedString(string: "TEST", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white]), for: .normal)
-        view.setAttributedTitle(NSAttributedString(string: "", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white]), for: .highlighted)
-        
-        view.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        
-        return view
-    }()
-    
-    //MARK: TEST
-    
-    lazy var testField:UITextField = {
-        let view = UITextField()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.textAlignment = .right
-        view.backgroundColor = .white
-        view.layer.borderColor = UIColor.black.cgColor
-        view.layer.borderWidth = 2
-        view.layer.cornerRadius = 8
-        view.layer.sublayerTransform = CATransform3DMakeTranslation(-15, 0, 0)
-        view.delegate = self
-        return view
-    }()
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -141,18 +111,13 @@ class ConvertViewController: UIViewController {
         activateConstrains()
         fetchExchangeRates(.cash)
         configureColor()
-        
-        
-        
     }
     
-
+    
     
     func configureColor() {
-        view.backgroundColor = UIColor(hue: 0.6667, saturation: 0.77, brightness: 0.43, alpha: 1.0)
-        
-       
-        
+        view.backgroundColor = .systemBlue
+
         labelCurrently.textColor = UIColor(hue: 0.1083, saturation: 0.74, brightness: 0.89, alpha: 1.0)
         
         labelPost.textColor = .white
@@ -189,28 +154,34 @@ class ConvertViewController: UIViewController {
         switch sender {
         case postField:
             print(sender.text ?? "")
-            let doubleValue = (Double(sender.text ?? "-") ?? 0.0) * (multiplicationСourse ?? 0.0)
+            let doubleValue = (Double(sender.text ?? "") ?? 0.0) * (multiplicationСourse ?? 0.0)
             self.getField.text = String(doubleValue) //тут сделать умножение на курс
-           
+            switch self.postconvertView.codeLabel.text ?? "" {
+            case "UAH":
+                let doubleValue = (Double(sender.text ?? "") ?? 0.0) / (multiplicationСourse ?? 0.0)
+                self.getField.text = String(format: "%.01f", doubleValue) //тут сделать умножение на курс
+            default:
+                let doubleValue = (Double(sender.text ?? "") ?? 0.0) * (multiplicationСourse ?? 0.0)
+                self.getField.text = String(format: "%.01f", doubleValue)
+            }
             
         case getField:
             print(sender.text ?? "")
-        
+            switch self.getconvertView.codeLabel.text ?? "" {
+            case "UAH":
+                let doubleValue = (Double(sender.text ?? "") ?? 0.0) / (multiplicationСourse ?? 0.0)
+                self.postField.text = String(format: "%.01f", doubleValue) //тут сделать умножение на курс
+            default:
+                let doubleValue = (Double(sender.text ?? "") ?? 0.0) * (multiplicationСourse ?? 0.0)
+                self.postField.text = String(format: "%.01f", doubleValue)
+            }
+            
+            
         default:
             break
         }
     }
     
-    
-    @objc func buttonAction(sender: UIButton!) {
-        view.endEditing(true)
-        print("Button tapped")
-        print("Post: \(dataPost)")
-        print("Get: \(dataGet)")
-        // print(currencies)
-        print("Multiplication: \(multiplicationСourse ?? 0)")
-        
-    }
     
     func addSubViews() {
         view.addSubview(postconvertView)
@@ -222,8 +193,6 @@ class ConvertViewController: UIViewController {
         view.addSubview(labelGet)
         view.addSubview(labelPost)
         view.addSubview(viewLine)
-//        view.addSubview(buttonTest)
-//        view.addSubview(testField)
         
     }
     
@@ -266,33 +235,18 @@ class ConvertViewController: UIViewController {
             viewLine.topAnchor.constraint(equalTo: labelCurrently.bottomAnchor, constant: 20),
             viewLine.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 0),
             viewLine.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: 0),
-            viewLine.heightAnchor.constraint(equalToConstant: 2),
-            
-            //MARK: TEST
-//            buttonTest.topAnchor.constraint(equalTo: viewLine.bottomAnchor, constant: 80),
-//            buttonTest.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-//            buttonTest.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
-//            buttonTest.heightAnchor.constraint(equalToConstant: 40),
-//
-//            testField.topAnchor.constraint(equalTo: buttonTest.bottomAnchor, constant: 80),
-//            testField.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-//            testField.widthAnchor.constraint(equalToConstant: 220),
-//            testField.heightAnchor.constraint(equalToConstant: 45),
-            
-            
-            
+            viewLine.heightAnchor.constraint(equalToConstant: 2)
             
         ])
     }
     //MARK: POST
     func updateViewsWithpostAction(_ code:String) {
         let chosenCCY = self.currencies.first { $0.ccy == code }
-        print(chosenCCY?.sale?.prefix(2) ?? "-")
-        labelCurrently.text = "1 \(code) - \((chosenCCY?.sale ?? "").dropChar()) UAH"
-        
-        multiplicationСourse = Double((chosenCCY?.sale ?? ""))
+        //        labelCurrently.text = "1 \(code) - \((chosenCCY?.sale ?? "").dropChar()) UAH"
+        //
+        //        multiplicationСourse = Double((chosenCCY?.sale ?? ""))
         postconvertView.codeLabel.text = code
-
+        
         switch code {
         case "USD":
             postconvertView.signImageView.image = UIImage(named: "usd")
@@ -311,9 +265,6 @@ class ConvertViewController: UIViewController {
             
         case "UAH":
             postconvertView.signImageView.image = UIImage(named: "uah")
-//            let chosenCCY = self.currencies.first { $0.ccy == "USD" }
-//            labelCurrently.text = "1 USD - \((chosenCCY?.sale ?? "").dropChar()) UAH"
-            
             
         default:
             break
@@ -321,9 +272,10 @@ class ConvertViewController: UIViewController {
     }
     //MARK: GET
     func updateViewsWithgetAction(_ code:String) {
-        let chosenCCY = self.currencies.first { $0.ccy == code }
-        
-        print(chosenCCY?.sale?.prefix(2) ?? "-")
+//        let chosenCCY = self.currencies.first { $0.sale == defaultCode }
+//        labelCurrently.text = "1 \(defaultCode) - \((chosenCCY?.sale ?? "").dropChar()) UAH"
+//
+//        multiplicationСourse = Double((chosenCCY?.sale ?? ""))
         getconvertView.codeLabel.text = code
         
         switch code {
@@ -352,21 +304,55 @@ class ConvertViewController: UIViewController {
     
     @objc func postAction() {
         print("postAction")
+        let code = postconvertView.codeLabel.text
+        let data = qwertWith(chosenCcy: code!)
         let vc = CCYViewController { [weak self] code in
             guard let self = self else {return}
-            self.updateViewsWithpostAction(code)
+            
+            
+            switch code {
+            case "UAH":
+                self.updateViewsWithpostAction(code)
+                self.updateViewsWithgetAction(self.defaultCode)
+            default:
+                self.defaultCode = code
+                self.updateViewsWithpostAction(code)
+            }
+            let chosenCCY = self.currencies.first { $0.ccy == self.defaultCode }
+            self.labelCurrently.text = "1 \(self.defaultCode == "RUR" ? String(self.defaultCode.dropLast()) + "B" : self.defaultCode) - \((chosenCCY?.buy ?? "").dropChar()) UAH"
+            self.multiplicationСourse = Double((chosenCCY?.buy ?? ""))
+
         }
+        vc.currencySign = data.sign
+        vc.currencyCode = data.code
         vc.modalPresentationStyle = .automatic
         self.present(vc, animated: true, completion: nil)
     }
     
     @objc func getAction() {
         print("getAction")
+        let code = getconvertView.codeLabel.text
+        let data = qwertWith(chosenCcy: code!)
         let vc = CCYViewController { [weak self] code in
             guard let self = self else {return}
-            self.updateViewsWithgetAction(code)
             
+            
+            switch code {
+            case "UAH":
+                self.updateViewsWithgetAction(code)
+                self.updateViewsWithpostAction(self.defaultCode)
+            default:
+                self.defaultCode = code
+                self.updateViewsWithgetAction(code)
+            }
+            
+            let chosenCCY = self.currencies.first { $0.ccy == self.defaultCode }
+            self.labelCurrently.text = "1 \(self.defaultCode == "RUR" ? String(self.defaultCode.dropLast()) + "B" : self.defaultCode) - \((chosenCCY?.sale ?? "").dropChar()) UAH"
+            self.multiplicationСourse = Double((chosenCCY?.sale ?? ""))
+
         }
+        vc.currencySign = data.sign
+        vc.currencyCode = data.code
         vc.modalPresentationStyle = .automatic
         self.present(vc, animated: true, completion: nil)
     }
@@ -378,15 +364,17 @@ extension ConvertViewController : UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         if textField == postField {
             dataPost = textField.text ?? ""
+            textField.backgroundColor = .lightGray
         }
         
         if textField == getField {
             dataGet = textField.text ?? ""
-        }
-                  
+            textField.backgroundColor = .lightGray
         }
         
-       
+    }
+    
+    
     
     // изменение во время ввода
     func textFieldDidChangeSelection(_ textField: UITextField) {
@@ -406,7 +394,7 @@ extension ConvertViewController : UITextFieldDelegate {
         textField.keyboardType = .numbersAndPunctuation
     }
     
-
+    
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
@@ -414,3 +402,20 @@ extension ConvertViewController : UITextFieldDelegate {
     }
 }
 
+extension ConvertViewController {
+    func qwertWith(chosenCcy: String) -> (sign: [String], code: [String]) {
+        let currencySign = ["₴", "$", "₽", "€", "₿", ]
+        let currencyCode = ["UAH","USD", "RUR","EUR", "BTC"]
+        switch chosenCcy {
+        case "UAH":
+            var newArraySign = [String]()
+            var newArrayCode = [String]()
+            let index = currencyCode.firstIndex(of: "UAH")!
+            newArrayCode.append(currencyCode[index])
+            newArraySign.append(currencySign[index])
+            return (newArraySign, newArrayCode)
+        default:
+            return (currencySign, currencyCode)
+        }
+    }
+}
