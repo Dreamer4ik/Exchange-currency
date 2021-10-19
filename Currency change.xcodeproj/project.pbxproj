@@ -10,6 +10,10 @@
 		DF29977026D0EB0F001EB1A8 /* logoMoney.png in Resources */ = {isa = PBXBuildFile; fileRef = DF29976F26D0EB0F001EB1A8 /* logoMoney.png */; };
 		DF2E1FF326B6C8B700D989A6 /* CurrencyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2E1FF226B6C8B700D989A6 /* CurrencyTableViewCell.swift */; };
 		DF2F215C26CAB3E700A904B3 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2F215B26CAB3E700A904B3 /* CustomTableViewCell.swift */; };
+		DF31BE6B26FB7065004AC65A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF31BE6A26FB7065004AC65A /* ViewController.swift */; };
+		DF31BE6D26FB70A5004AC65A /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF31BE6C26FB70A5004AC65A /* CustomTextField.swift */; };
+		DF31BE6F26FB70E4004AC65A /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF31BE6E26FB70E4004AC65A /* MainButton.swift */; };
+		DF31BE7126FB7112004AC65A /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF31BE7026FB7112004AC65A /* Button.swift */; };
 		DF5C068426CC0C090075602A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5C068326CC0C090075602A /* Extensions.swift */; };
 		DF616ABB26F732C2008D7EE8 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF616ABA26F732C2008D7EE8 /* CustomTabBarController.swift */; };
 		DF616ABD26F74B42008D7EE8 /* logoBlue.PNG in Resources */ = {isa = PBXBuildFile; fileRef = DF616ABC26F74B42008D7EE8 /* logoBlue.PNG */; };
@@ -34,6 +38,10 @@
 		DF29976F26D0EB0F001EB1A8 /* logoMoney.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logoMoney.png; sourceTree = "<group>"; };
 		DF2E1FF226B6C8B700D989A6 /* CurrencyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTableViewCell.swift; sourceTree = "<group>"; };
 		DF2F215B26CAB3E700A904B3 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		DF31BE6A26FB7065004AC65A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DF31BE6C26FB70A5004AC65A /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		DF31BE6E26FB70E4004AC65A /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
+		DF31BE7026FB7112004AC65A /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		DF5C068326CC0C090075602A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		DF616ABA26F732C2008D7EE8 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		DF616ABC26F74B42008D7EE8 /* logoBlue.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logoBlue.PNG; sourceTree = "<group>"; };
@@ -74,6 +82,17 @@
 				DF616ABA26F732C2008D7EE8 /* CustomTabBarController.swift */,
 			);
 			path = Custom;
+			sourceTree = "<group>";
+		};
+		DF31BE6926FB702A004AC65A /* For test */ = {
+			isa = PBXGroup;
+			children = (
+				DF31BE6A26FB7065004AC65A /* ViewController.swift */,
+				DF31BE7026FB7112004AC65A /* Button.swift */,
+				DF31BE6C26FB70A5004AC65A /* CustomTextField.swift */,
+				DF31BE6E26FB70E4004AC65A /* MainButton.swift */,
+			);
+			path = "For test";
 			sourceTree = "<group>";
 		};
 		DF85EB3826C98C65006151A9 /* images */ = {
@@ -123,6 +142,7 @@
 				DFD395DB26AB2C180006F4B2 /* Implements.swift */,
 				DF2E1FF226B6C8B700D989A6 /* CurrencyTableViewCell.swift */,
 				DF5C068326CC0C090075602A /* Extensions.swift */,
+				DF31BE6926FB702A004AC65A /* For test */,
 				DFE472EE26B480900059A2F9 /* PrivatBankAPI.swift */,
 				DF86713B26A1D5D700EED6EC /* Main.storyboard */,
 				DF86713E26A1D5D700EED6EC /* Assets.xcassets */,
@@ -223,6 +243,7 @@
 				DF86713626A1D5D700EED6EC /* AppDelegate.swift in Sources */,
 				DF86714C26A1DB4E00EED6EC /* CurrencyViewController.swift in Sources */,
 				DFD395DC26AB2C180006F4B2 /* Implements.swift in Sources */,
+				DF31BE6B26FB7065004AC65A /* ViewController.swift in Sources */,
 				DF85EB3A26C98D2B006151A9 /* CCYViewController.swift in Sources */,
 				DF2F215C26CAB3E700A904B3 /* CustomTableViewCell.swift in Sources */,
 				DF85EB4326C99614006151A9 /* ConvertView.swift in Sources */,
@@ -230,8 +251,11 @@
 				DF85EB3226C98A99006151A9 /* ConvertViewController.swift in Sources */,
 				DFE472EF26B480900059A2F9 /* PrivatBankAPI.swift in Sources */,
 				DF616ABB26F732C2008D7EE8 /* CustomTabBarController.swift in Sources */,
+				DF31BE6F26FB70E4004AC65A /* MainButton.swift in Sources */,
 				DF96871D26C2724B0052E79A /* ProfileViewController.swift in Sources */,
 				DF86713826A1D5D700EED6EC /* SceneDelegate.swift in Sources */,
+				DF31BE6D26FB70A5004AC65A /* CustomTextField.swift in Sources */,
+				DF31BE7126FB7112004AC65A /* Button.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y4w-1G-VGV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y4w-1G-VGV">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -147,6 +148,39 @@
             </objects>
             <point key="canvasLocation" x="1740.5797101449277" y="981.69642857142856"/>
         </scene>
+        <!--TEST-->
+        <scene sceneID="Tel-Pn-xAp">
+            <objects>
+                <navigationController id="b1w-DO-WBv" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="TEST" id="41c-xW-7g7"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ihp-TR-mB5">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="lTh-vA-MpT" kind="relationship" relationship="rootViewController" id="ExH-5p-KER"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vFc-xD-wcj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2738" y="975"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="iPL-vk-aOh">
+            <objects>
+                <viewController id="lTh-vA-MpT" customClass="ViewController" customModule="Currency_change" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gNt-px-AWM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Whe-Mo-qdQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ByB-Ku-th5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YcB-R4-ft3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3583" y="994"/>
+        </scene>
         <!--Currency View Controller-->
         <scene sceneID="EId-Ce-mGE">
             <objects>
@@ -170,7 +204,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="id1" rowHeight="110" id="fL6-F6-kxP" customClass="CurrencyTableViewCell" customModule="Currency_change" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.5" width="414" height="110"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fL6-F6-kxP" id="V6d-Lu-7Hw">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="110"/>
@@ -278,12 +312,12 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vTd-Ka-N5l">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="DOM-fZ-hub" kind="relationship" relationship="viewControllers" id="T3b-pa-mle"/>
                         <segue destination="mUM-F1-zXM" kind="relationship" relationship="viewControllers" id="QHz-dI-RMa"/>
                         <segue destination="UEp-JV-Vs1" kind="relationship" relationship="viewControllers" id="RL3-LN-5sa"/>
+                        <segue destination="b1w-DO-WBv" kind="relationship" relationship="viewControllers" id="iTx-BM-0bf"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AED-cK-KRH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

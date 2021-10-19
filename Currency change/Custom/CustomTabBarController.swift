@@ -61,6 +61,13 @@ class CustomTabBarController: UITabBarController {
     private func configureTabBar() {
         tabBar.barTintColor = .systemBlue
         tabBar.tintColor = .white
+        if #available(iOS 15.0, *) {
+            let appearance = UITabBarAppearance()
+            appearance.backgroundColor = .systemBlue
+            tabBar.tintColor = .white
+            tabBar.standardAppearance = appearance
+            tabBar.scrollEdgeAppearance = tabBar.standardAppearance
+        }
 //        tabBar.tintColor = UIColor(red: 1, green: 0, blue: 0.62, alpha: 1)
         tabBar.unselectedItemTintColor = UIColor(red: 0.212, green: 0.212, blue: 0.212, alpha: 1)
         
@@ -96,13 +103,30 @@ extension CustomTabBarController  {
             case "Currency":
                 tabBar.barTintColor = .systemBlue
                 tabBar.tintColor = .white
-            case "Convert":
-//                tabBar.barTintColor = UIColor(hue: 0.3333, saturation: 1, brightness: 0.39, alpha: 1.0)
-                tabBar.barTintColor = .white
-                tabBar.tintColor = .systemBlue
+                if #available(iOS 15.0, *) {
+                    let appearance = UITabBarAppearance()
+                    appearance.backgroundColor = .systemBlue
+                    tabBar.tintColor = .white
+                    tabBar.standardAppearance = appearance
+                    tabBar.scrollEdgeAppearance = tabBar.standardAppearance
+                    
+                }
+//            case "Convert":
+////                tabBar.barTintColor = UIColor(hue: 0.3333, saturation: 1, brightness: 0.39, alpha: 1.0)
+//                tabBar.barTintColor = .white
+//                tabBar.tintColor = .systemBlue
             default:
                 tabBar.barTintColor = .white
                 tabBar.tintColor = .systemBlue
+                if #available(iOS 15.0, *) {
+                    let appearance = UITabBarAppearance()
+                    appearance.backgroundColor = .white
+                    tabBar.standardAppearance = appearance
+                    tabBar.scrollEdgeAppearance = tabBar.standardAppearance
+                }
+                    
+                
+                
             }
         }
     }
